@@ -2,6 +2,7 @@ package com.wordpress.getaufansepta.newsdev.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -39,10 +40,15 @@ public class AdapterNewsDB extends RecyclerView.Adapter<AdapterNewsDB.CategoryVi
     @Override
     public void onBindViewHolder(AdapterNewsDB.CategoryViewHolder holder, int position){
         String img_url = getArticleList().get(position).getUrlToImage();
-        Picasso.with(context).load(img_url)
-                .placeholder(R.color.cardview_dark_background)
-                .error(R.drawable.broken_image)
-                .into(holder.imgheadline);
+        if (TextUtils.isEmpty(img_url)){
+            Picasso.with(context).load(R.drawable.broken_image).into(holder.imgheadline);
+        }else{
+            Picasso.with(context).load(img_url)
+                    .placeholder(R.color.cardview_dark_background)
+                    .error(R.drawable.broken_image)
+                    .into(holder.imgheadline);
+        }
+
         String title = getArticleList().get(position).getTitle();
         holder.descheadline.setText(title);
         String source = getArticleList().get(position).getSource_name();

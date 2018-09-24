@@ -22,7 +22,7 @@ public class ArticleHelper extends SQLiteOpenHelper{
     private static final String DATABASE_NAME = "NewsManager";
     private static final String TABLE_NAME = "article";
 
-    private static final int KEY_ID = 0;
+    private static final String KEY_ID = "id";
     private static final String KEY_TITLE = "title";
     private static final String KEY_DESC = "desc";
     private static final String KEY_POSTER_URL = "poster";
@@ -39,7 +39,7 @@ public class ArticleHelper extends SQLiteOpenHelper{
     @Override
     public void onCreate(SQLiteDatabase db) {
         String CREATE_TABLE = "CREATE TABLE "+TABLE_NAME+ "("
-                +KEY_ID+" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,"
+                +KEY_ID+" INTEGER PRIMARY KEY NOT NULL,"
                 +KEY_TITLE+" TEXT,"
                 +KEY_DESC+" TEXT,"
                 +KEY_POSTER_URL+" TEXT,"
@@ -54,11 +54,15 @@ public class ArticleHelper extends SQLiteOpenHelper{
     }
 
     @Override
-    public void onUpgrade(SQLiteDatabase db, int i, int i1) {
-        db.execSQL("DROP TABLE IF EXISTS "+TABLE_NAME);
+    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        if(newVersion > oldVersion){
+            Log.w("Update Database Version","Updating database from version "+oldVersion+" to "+newVersion+"...");
 
-        //recreate table
-        onCreate(db);
+            db.execSQL("DROP TABLE IF EXISTS "+TABLE_NAME);
+
+            //recreate table
+            onCreate(db);
+        }
     }
 
     //add news article
