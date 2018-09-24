@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Berkabar</string>
+    <string name="titlebar_headline">Headline Terkini</string>
+    <string name="titlebar_newsline">Kabar Lainnya</string>
+    <string name="title_home">Home</string>
+    <string name="titleCategorie_1">Bisnis</string>
+    <string name="titleCategorie_2">Sains</string>
+    <string name="titleCategorie_3">Olahraga</string>
+    <string name="titleCategorie_4">Tekno</string>
+    <string name="titleCategorie_5">Kesehatan</string>
+    <string name="titleCategorie_6">Hiburan</string>
+    <string name="banner_ad_unitID">ca-app-pub-8505828987629407/5519477695</string>
+    <string name="banner_ad_unit_id">ca-app-pub-8505828987629407/5092962085</string>
+    <string name="hello_blank_fragment">Hello Fragment</string>
+    <string name="title_nonews">Tidak ada berita lainnya</string>
+    <string name="init_menu_bisnis">business</string>
+    <string name="init_menu_sains">science</string>
+    <string name="init_menu_olahraga">sports</string>
+    <string name="init_menu_tekno">technology</string>
+    <string name="init_menu_kesehatan">health</string>
+    <string name="init_menu_hiburan">entertainment</string>
+    <string name="init_menu_home">general</string>
+    <string name="title_read">Baca Sumber</string>
+</resources>

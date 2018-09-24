@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="200dp"
+    android:layout_height="200dp"
+    android:orientation="horizontal"
+    android:paddingBottom="10dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp"
+    android:id="@+id/headlines">
+    <android.support.v7.widget.CardView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingRight="6dp"
+            android:paddingTop="6dp"
+            android:paddingLeft="6dp"
+            android:paddingBottom="6dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="nama sumber"
+                android:textSize="8sp"
+                android:id="@+id/srcname_headline"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:src="@mipmap/ic_launcher"
+                android:id="@+id/imgheadline"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="short description short description short description"
+                android:id="@+id/descheadline"
+                android:textAlignment="center"
+                />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>
+
+
+
+
